@@ -49,17 +49,11 @@ struct RingView: View {
         .frame(width: UIScreen.main.bounds.width - 20)
         .background(Color.white)
         .cornerRadius(20)
-        .modifier(customShadow())
+        .modifier(CustomShadow())
     }
 }
 
-struct customShadow: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 0)
 
-    }
-}
 
 
 

@@ -11,6 +11,10 @@
 		9E1161302B1DDDE30055EBF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E11612F2B1DDDE30055EBF2 /* ContentView.swift */; };
 		9E1161322B1DDDE40055EBF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1161312B1DDDE40055EBF2 /* Assets.xcassets */; };
 		9E1161352B1DDDE40055EBF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1161342B1DDDE40055EBF2 /* Preview Assets.xcassets */; };
+		9E11613D2B1DDE5B0055EBF2 /* CDfoodclass.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E11613B2B1DDE5B0055EBF2 /* CDfoodclass.xcdatamodeld */; };
+		9E11613F2B1DF65E0055EBF2 /* CDDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E11613E2B1DF65E0055EBF2 /* CDDataModel.swift */; };
+		9E1161412B1E04660055EBF2 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1161402B1E04660055EBF2 /* RingView.swift */; };
+		9E1161432B1E27170055EBF2 /* FoodElementValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1161422B1E27170055EBF2 /* FoodElementValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		9E11612F2B1DDDE30055EBF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9E1161312B1DDDE40055EBF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E1161342B1DDDE40055EBF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9E11613C2B1DDE5B0055EBF2 /* CDfoodclass.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDfoodclass.xcdatamodel; sourceTree = "<group>"; };
+		9E11613E2B1DF65E0055EBF2 /* CDDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDataModel.swift; sourceTree = "<group>"; };
+		9E1161402B1E04660055EBF2 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		9E1161422B1E27170055EBF2 /* FoodElementValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodElementValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				9E11612D2B1DDDE30055EBF2 /* CaloriesAppApp.swift */,
+				9E1161402B1E04660055EBF2 /* RingView.swift */,
+				9E1161422B1E27170055EBF2 /* FoodElementValue.swift */,
 				9E11612F2B1DDDE30055EBF2 /* ContentView.swift */,
+				9E11613B2B1DDE5B0055EBF2 /* CDfoodclass.xcdatamodeld */,
+				9E11613E2B1DF65E0055EBF2 /* CDDataModel.swift */,
 				9E1161312B1DDDE40055EBF2 /* Assets.xcassets */,
 				9E1161332B1DDDE40055EBF2 /* Preview Content */,
 			);
@@ -137,7 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E1161432B1E27170055EBF2 /* FoodElementValue.swift in Sources */,
+				9E1161412B1E04660055EBF2 /* RingView.swift in Sources */,
 				9E1161302B1DDDE30055EBF2 /* ContentView.swift in Sources */,
+				9E11613D2B1DDE5B0055EBF2 /* CDfoodclass.xcdatamodeld in Sources */,
+				9E11613F2B1DF65E0055EBF2 /* CDDataModel.swift in Sources */,
 				9E11612E2B1DDDE30055EBF2 /* CaloriesAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +360,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9E11613B2B1DDE5B0055EBF2 /* CDfoodclass.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9E11613C2B1DDE5B0055EBF2 /* CDfoodclass.xcdatamodel */,
+			);
+			currentVersion = 9E11613C2B1DDE5B0055EBF2 /* CDfoodclass.xcdatamodel */;
+			path = CDfoodclass.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9E1161222B1DDDE30055EBF2 /* Project object */;
 }

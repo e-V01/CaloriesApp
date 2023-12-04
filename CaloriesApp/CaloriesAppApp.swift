@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CaloriesAppApp: App {
+    @StateObject var viewModel: CDDataModel = CDDataModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(CDDataModel())
         }
     }
 }

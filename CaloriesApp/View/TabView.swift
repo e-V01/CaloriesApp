@@ -12,7 +12,7 @@ import SwiftUI
 struct TabView: View {
     @Binding var itemSelected: Tab
     var body: some View {
-        HStack {
+        HStack(spacing: 30) {
             ForEach(selectedTab) { item in
                 Button(action: {
                     withAnimation {

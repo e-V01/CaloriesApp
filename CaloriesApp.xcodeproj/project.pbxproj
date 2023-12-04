@@ -19,6 +19,9 @@
 		9E1161472B1E39040055EBF2 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1161462B1E39040055EBF2 /* TabView.swift */; };
 		9E1161492B1E3E030055EBF2 /* FoodCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1161482B1E3E030055EBF2 /* FoodCart.swift */; };
 		9E11614B2B1E567E0055EBF2 /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E11614A2B1E567E0055EBF2 /* WaterView.swift */; };
+		9E11614D2B1E6D880055EBF2 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E11614C2B1E6D880055EBF2 /* AddView.swift */; };
+		9E1161552B1E70630055EBF2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1161542B1E70630055EBF2 /* Person.swift */; };
+		9E1161572B1E75AB0055EBF2 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1161562B1E75AB0055EBF2 /* Values.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		9E1161462B1E39040055EBF2 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		9E1161482B1E3E030055EBF2 /* FoodCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCart.swift; sourceTree = "<group>"; };
 		9E11614A2B1E567E0055EBF2 /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
+		9E11614C2B1E6D880055EBF2 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		9E1161542B1E70630055EBF2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		9E1161562B1E75AB0055EBF2 /* Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,16 +73,11 @@
 		9E11612C2B1DDDE30055EBF2 /* CaloriesApp */ = {
 			isa = PBXGroup;
 			children = (
-				9E11612D2B1DDDE30055EBF2 /* CaloriesAppApp.swift */,
-				9E1161402B1E04660055EBF2 /* RingView.swift */,
-				9E1161462B1E39040055EBF2 /* TabView.swift */,
-				9E1161482B1E3E030055EBF2 /* FoodCart.swift */,
-				9E11614A2B1E567E0055EBF2 /* WaterView.swift */,
-				9E1161422B1E27170055EBF2 /* FoodElementValue.swift */,
-				9E11612F2B1DDDE30055EBF2 /* ContentView.swift */,
-				9E1161442B1E29DF0055EBF2 /* CustomShadow.swift */,
-				9E11613B2B1DDE5B0055EBF2 /* CDfoodclass.xcdatamodeld */,
-				9E11613E2B1DF65E0055EBF2 /* CDDataModel.swift */,
+				9E1161532B1E6EA20055EBF2 /* Core */,
+				9E1161522B1E6E6E0055EBF2 /* ViewModel */,
+				9E1161512B1E6E600055EBF2 /* Model */,
+				9E1161502B1E6E560055EBF2 /* View */,
+				9E11614E2B1E6E440055EBF2 /* App */,
 				9E1161312B1DDDE40055EBF2 /* Assets.xcassets */,
 				9E1161332B1DDDE40055EBF2 /* Preview Content */,
 			);
@@ -89,6 +90,54 @@
 				9E1161342B1DDDE40055EBF2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9E11614E2B1E6E440055EBF2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9E11612D2B1DDDE30055EBF2 /* CaloriesAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9E1161502B1E6E560055EBF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E11614C2B1E6D880055EBF2 /* AddView.swift */,
+				9E11612F2B1DDDE30055EBF2 /* ContentView.swift */,
+				9E1161402B1E04660055EBF2 /* RingView.swift */,
+				9E1161462B1E39040055EBF2 /* TabView.swift */,
+				9E11614A2B1E567E0055EBF2 /* WaterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E1161512B1E6E600055EBF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E1161542B1E70630055EBF2 /* Person.swift */,
+				9E11613E2B1DF65E0055EBF2 /* CDDataModel.swift */,
+				9E11613B2B1DDE5B0055EBF2 /* CDfoodclass.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E1161522B1E6E6E0055EBF2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9E1161532B1E6EA20055EBF2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9E1161422B1E27170055EBF2 /* FoodElementValue.swift */,
+				9E1161482B1E3E030055EBF2 /* FoodCart.swift */,
+				9E1161442B1E29DF0055EBF2 /* CustomShadow.swift */,
+				9E1161562B1E75AB0055EBF2 /* Values.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,8 +216,11 @@
 				9E1161302B1DDDE30055EBF2 /* ContentView.swift in Sources */,
 				9E11614B2B1E567E0055EBF2 /* WaterView.swift in Sources */,
 				9E1161452B1E29DF0055EBF2 /* CustomShadow.swift in Sources */,
+				9E11614D2B1E6D880055EBF2 /* AddView.swift in Sources */,
 				9E11613D2B1DDE5B0055EBF2 /* CDfoodclass.xcdatamodeld in Sources */,
+				9E1161572B1E75AB0055EBF2 /* Values.swift in Sources */,
 				9E1161492B1E3E030055EBF2 /* FoodCart.swift in Sources */,
+				9E1161552B1E70630055EBF2 /* Person.swift in Sources */,
 				9E11613F2B1DF65E0055EBF2 /* CDDataModel.swift in Sources */,
 				9E11612E2B1DDDE30055EBF2 /* CaloriesAppApp.swift in Sources */,
 			);

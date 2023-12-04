@@ -17,7 +17,7 @@ struct FoodElementValue: View {
         let height: CGFloat = 130
         let multiplier = height / 2000
        return VStack {
-            ZStack {
+           ZStack(alignment: .bottom) {
                 Rectangle()
                     .frame(width: 8, height: 110)
                     .foregroundStyle(.gray.opacity(0.5))

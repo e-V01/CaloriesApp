@@ -36,14 +36,22 @@ struct RingView: View {
                     .rotationEffect(Angle(degrees: 90))
                     .rotation3DEffect(
                         Angle(degrees: 180),
-                                              axis: (x: 1.0, y: 0, z: 0)
+                        axis: (x: 1.0, y: 0, z: 0)
                     )
                     .frame(width: width, height: height)
                 Text("1790")
                     .bold()
                     .font(.title)
             }
-            FoodElementValue()
+            
+            HStack(spacing: 30) {
+                ForEach(viewModel.saveValueEntity) { item in
+                    FoodElementValue(element: "cards", gram: String(format: "%.0f", item.cards), color: "cards", elementValue: CGFloat(item.cards))
+                    FoodElementValue(element: "fat", gram: String(format: "%.0f", item.fat), color: "fat", elementValue: CGFloat(item.fat))
+                    FoodElementValue(element: "protein", gram: String(format: "%.0f", item.protein), color: "protein", elementValue: CGFloat(item.protein))
+                    
+                }
+            }
         }
         .frame(height: 180)
         .frame(width: UIScreen.main.bounds.width - 20)

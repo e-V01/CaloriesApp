@@ -9,12 +9,12 @@ import SwiftUI
 
 struct FoodCart: View {
     var width: CGFloat = 200
-    @State private var cards: CGFloat = 20
-    @State private var protein: CGFloat = 100
-    @State private var fat: CGFloat = 70
-    @State private var name: String = ""
-    @State private var title: String = ""
-    @State private var icon: String = ""
+    @State var cards: CGFloat = 20
+    @State var protein: CGFloat = 100
+    @State var fat: CGFloat = 70
+    @State var name: String = ""
+    @State var title: String = ""
+    @State var icon: String = ""
 
     
     var body: some View {
@@ -51,34 +51,15 @@ struct FoodCart: View {
         }
         .overlay(alignment: .bottom) {
             HStack {
-                Elements(name: "Cards", foodElement: cards, mulitplier: multiplier, color: "cards")
-                Elements(name: "Fat", foodElement: fat, mulitplier: multiplier, color: "fat")
-                Elements(name: "Protein", foodElement: protein, mulitplier: multiplier, color: "protein")
+                Elements(name: "cards", foodElement: cards, mulitplier: multiplier, color: "cards")
+                Elements(name: "fat", foodElement: fat, mulitplier: multiplier, color: "fat")
+                Elements(name: "protein", foodElement: protein, mulitplier: multiplier, color: "protein")
             }
         }
     }
 }
 
-struct Elements: View {
-    var name = "name"
-    var foodElement: CGFloat = 100
-    var mulitplier: CGFloat = 0
-    var color = ""
-    var body: some View {
-        let width: CGFloat = 130
-        var mulitplier = width / 200
-        return VStack {
-            Text(name)
-                .font(.system(size: 12))
-            Rectangle()
-                .frame(width: foodElement * mulitplier, height: 5)
-                .cornerRadius(5)
-                .foregroundStyle(Color(color))
-        }
-        .padding(.bottom, 5)
-        .frame(width: 90)
-    }
-}
+
 
 #Preview {
     FoodCart()

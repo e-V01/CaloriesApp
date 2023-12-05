@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddView: View {
+    @Environment (\.presentationMode) var envi
     @EnvironmentObject var viewModel: CDDataModel
     @State private var itemSelected: Tab = .Breakfast
     @State private var showIcons: Bool = false
@@ -23,6 +24,7 @@ struct AddView: View {
 
     var body: some View {
         VStack {
+            Spacer()
             TabView(itemSelected: $itemSelected)
             VStack(spacing: 25) {
                 Image(icon)
@@ -78,6 +80,20 @@ struct AddView: View {
                 .cornerRadius(20)
                 .modifier(CustomShadow())
                 Button {
+                    switch itemSelected {
+                    case .Breakfast:
+                        viewModel.addBreakfast(icon: icon, name: name, ingridients: title, fat: CGFloat(Int(fat) ?? 0), protein: CGFloat(Int(protein) ?? 0), cards: CGFloat(Int(cards) ?? 0))
+                        envi.wrappedValue.dismiss()
+
+                    case .Lunch:
+                        viewModel.addLunch(icon: icon, name: name, ingridients: title, fat: CGFloat(Int(fat) ?? 0), protein: CGFloat(Int(protein) ?? 0), cards: CGFloat(Int(cards) ?? 0))
+                        envi.wrappedValue.dismiss()
+
+                    case .Dinner:
+                        print("Dinner")
+                    case .Snacks:
+                        print("Snacks")
+                    }
                     
                 } label: {
                     Text("Save")
@@ -91,10 +107,29 @@ struct AddView: View {
 
                 }
             }
-        }
-        .padding()
+            .padding()
 
-        Spacer()
+            Spacer()
+        }
+        
+        .overlay(alignment: .topTrailing) {
+            Button {
+                envi.wrappedValue.dismiss()
+            } label: {
+                ZStack {
+                    Circle()
+                    .frame(width: 30, height: 30)
+                    .foregroundStyle(.black)
+                    Image(systemName: "xmark")
+                        .imageScale(.large)
+                        .foregroundStyle(.white)
+
+                }
+                .modifier(CustomShadow())
+                .padding()
+            }
+        }
+        
     }
 }
 

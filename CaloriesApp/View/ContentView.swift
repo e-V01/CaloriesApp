@@ -16,7 +16,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 HStack {
-                    Text("Yurii")
+                    Text("Hi Yurii")
                         .bold()
                         .font(.system(size: 35))
                     Spacer()
@@ -39,6 +39,11 @@ struct ContentView: View {
                                     .padding()
                                     .overlay(alignment: .topTrailing) {
                                         Button {
+                                            viewModel.addValue(fat: CGFloat(item.fat),
+                                                               protein: CGFloat(item.protein),
+                                                               cards: CGFloat(item.cards))
+                                            viewModel.addMealToggle(meal: item)
+                                            viewModel.addCalories(calories: CGFloat(item.cards))
                                             
                                         } label: {
                                             ZStack {
@@ -56,9 +61,43 @@ struct ContentView: View {
                             }
                             
                         }
+                        .frame(height: 180)
                     }
+                    .offset(y: -30)
+                } else if itemSelected == .Lunch{
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 10) {
+                            ForEach(viewModel.saveLunchEntity) { item in
+                                FoodCart(width: 200, cards: CGFloat(item.cards), protein: CGFloat(item.cards), fat: CGFloat(item.cards), name: item.name ?? "", title: item.ingridients ?? "", icon: item.icon ?? "")
+                                    .padding(.leading)
+                                    
+                            }
+                            
+                        }
+                        .frame(height: 180)
+                    }
+                    .offset(y: -30)
                 }
-                
+                WaterView()
+                    .offset(y: -60)
+                Spacer()
+                    .overlay(alignment: .bottomLeading) {
+                        Button {
+                            show.toggle()
+                        } label: {
+                            Text("New Person")
+                                .bold()
+                                .foregroundStyle(.black)
+                                .frame(width: 150, height: 50)
+                                .background(.white)
+                                .clipShape(Capsule())
+                                .modifier(CustomShadow())
+                        }
+                        .padding()
+                    }
+                    .sheet(isPresented: $show, content: {
+                        AddView()
+                    })
             }
         }
     }

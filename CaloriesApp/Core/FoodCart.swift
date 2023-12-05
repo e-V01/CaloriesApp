@@ -21,7 +21,7 @@ struct FoodCart: View {
         let multiplier = width / 40
         return VStack(alignment: .leading, spacing: 2) {
             HStack {
-                Text("Name")
+                Text(name)
                     .font(.title2)
                     .frame(width: 160)
                     .lineLimit(1)
@@ -30,7 +30,7 @@ struct FoodCart: View {
             .bold()
             
             HStack {
-                Text("Titles")
+                Text(title)
                 Spacer()
             }
             .frame(width: 200, height: 30)

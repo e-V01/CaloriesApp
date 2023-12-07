@@ -13,17 +13,19 @@ struct RingView: View {
     var percent: CGFloat = 50
     let width: CGFloat = 130
     let height: CGFloat = 130
+    var perc: CGFloat = 1000
     var body: some View {
         let ringValue = viewModel.saveValueEntity.first
         let multiplier = width / 44
         let progress = 1 - (ringValue?.ring ?? 0 / 1700)
+//        let progress = 1 - (perc / 1700)
         return HStack {
             ZStack {
                 Circle()
                     .stroke(Color.blue.opacity(0.1), style: StrokeStyle(lineWidth: 4 * multiplier))
                     .frame(width: width, height: height)
                 Circle()
-                    .trim(from: CGFloat(Int(progress)), to: 1)
+                    .trim(from: CGFloat(progress), to: 1)
                     .stroke(LinearGradient(gradient:
                                             Gradient(colors: [Color("cards"), .blue]),
                                            startPoint: .top,

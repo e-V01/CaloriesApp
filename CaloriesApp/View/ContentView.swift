@@ -68,7 +68,7 @@ struct ContentView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {
                             ForEach(viewModel.saveLunchEntity) { item in
-                                FoodCart(width: 200, cards: CGFloat(item.cards), protein: CGFloat(item.cards), fat: CGFloat(item.cards), name: item.name ?? "", title: item.ingridients ?? "", icon: item.icon ?? "")
+                                FoodCart(width: 200, cards: CGFloat(item.cards), protein: CGFloat(item.protein), fat: CGFloat(item.fat), name: item.name ?? "", title: item.ingridients ?? "", icon: item.icon ?? "")
                                     .padding(.leading)
                                     
                             }

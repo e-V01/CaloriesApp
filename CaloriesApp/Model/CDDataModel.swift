@@ -86,6 +86,9 @@ class CDDataModel: ObservableObject {
             let results = try container.viewContext.fetch(newCal)
             if let entity  = results.first {
                 entity.ring += Float(Int(calories))
+            } else {
+                let newEntity = ValueEntity(context: container.viewContext)
+                newEntity.ring = 10
             }
         } catch {
             print("Calories error \(error.localizedDescription)")
